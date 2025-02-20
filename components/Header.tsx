@@ -94,12 +94,12 @@ export default function Header({ title }: { title: string }) {
   const isAdmin = has({ permission: "org:app:admin" });
 
   return (
-    <header className="w-full font-sans" ref={headerRef}>
-      <div className="flex items-center p-4 py-6 rounded-xl bg-white shadow-md w-full justify-between">
+    <header className="w-full font-sans " ref={headerRef}>
+      <div className="flex items-center p-4 md:py-5 rounded-md sm:rounded-xl bg-[#faff61] shadow-md w-full justify-between">
         
-        <div className="flex px-4 items-center gap-2 md:gap-6" ref={logoRef}>
+        <div className="flex sm:px-4 items-center gap-3 md:gap-6" ref={logoRef}>
           <AlignLeftIcon className="w-4 h-4 md:w-6 md:h-6 text-gray-500" />
-          <p className="text-sm md:text-3xl md:font-normal">{title}</p>
+          <p className="text-md font-medium md:text-3xl md:font-normal">{title}</p>
         </div>
         {/* this is the user button to display the user related or user specified functions  */}
         <div className="flex items-center gap-3" ref={profileRef}>
