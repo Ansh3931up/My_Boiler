@@ -27,7 +27,7 @@ export default function Header({ title }: { title: string }) {
   const router = useRouter();
   
   // Add refs for the elements we want to animate
-  const headerRef = useRef(null);
+  const headerRef = useRef<HTMLElement>(null);
   const logoRef = useRef(null);
   const profileRef = useRef(null);
 
@@ -94,7 +94,7 @@ export default function Header({ title }: { title: string }) {
   const isAdmin = has({ permission: "org:app:admin" });
 
   return (
-    <header className="w-full font-sans " ref={headerRef}>
+    <header className="w-full font-sans" ref={headerRef}>
       <div className="flex items-center p-4 md:py-5 rounded-md sm:rounded-xl bg-[#faff61] shadow-md w-full justify-between">
         
         <div className="flex sm:px-4 items-center gap-3 md:gap-6" ref={logoRef}>
